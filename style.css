@@ -25,6 +25,7 @@ body {
     height: 64px;
     background-color: #171A21;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+    justify-content: center;
 }
 
 .topbar-steam-logo {
@@ -43,8 +44,9 @@ body {
     padding: 0 16px;
     height: 36px;
     border-bottom: 1px solid #151C28;
-    background: linear-gradient(to bottom, #182535, #1b2838);
+    background: linear-gradient(to bottom, rgba(24, 37, 53, 1), rgba(24, 37, 53, 0.05));
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+    justify-content: center;
 }
 
 .topbar-bottom-items {
