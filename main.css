@@ -1,0 +1,9 @@
+.main-content {
+    background: linear-gradient(to bottom, #1b2838, #0d1117);
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    height: 2000px;
+}
