@@ -23,6 +23,8 @@
                     <div class="topbar-right"></div>
                 </div>
             </div>
+        </div>
+        <div class="main-content">
             <div class="topbar-bottom">
                 <span>Browse</span>
                 <span>Recommendations</span>
@@ -35,8 +37,23 @@
                 </div>
                 <span>Wishlist</span>
             </div>
+            <div class="site-test"></div>
         </div>
-        <div class="main-content"></div>
     </div>
+    <script>
+        const mainContent = document.querySelector('.main-content');
+        mainContent.addEventListener('scroll', function() {
+            let scrollTop = mainContent.scrollTop;
+            if (scrollTop === 0) {
+                // at the top
+                document.querySelector('.topbar-top').classList.remove('hidden');
+                document.querySelector('.topbar-bottom').classList.remove('shifted');
+            } else {
+                // scrolled down
+                document.querySelector('.topbar-top').classList.add('hidden');
+                document.querySelector('.topbar-bottom').classList.add('shifted');
+            }
+        });
+    </script>
 </body>
 </html>

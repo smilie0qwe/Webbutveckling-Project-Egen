@@ -1,9 +1,18 @@
 .main-content {
     background: linear-gradient(to bottom, #1b2838, #0d1117);
+    height: 100vh;
+    overflow-y: auto;
+    padding-top: calc(6vh + 40px);
 }
 
 .container {
     display: flex;
     flex-direction: column;
+    overflow-y: auto;
+}
+
+.site-test {
+
     height: 2000px;
+    width: 100%;
 }
