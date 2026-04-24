@@ -4,8 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Steam</title>
-    <link rel="stylesheet" href="topbar.css">
-    <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="css/misc/topbar.css">
+    <link rel="stylesheet" href="css/misc/main.css">
+    <link rel="stylesheet" href="css/store/storebar.css">
 </head>
 <body>
     <div class="container">
@@ -13,9 +14,42 @@
                 <div class="topbar-big">
                     <div class="topbar-left">
                         <img src="https://store.fastly.steamstatic.com/public/shared/images/header/logo_steam.svg" alt="Steam Logo" class="logo">
-                        <span>STORE</span>
-                        <span>COMMUNITY</span>
-                        <span>RALPH</span>
+                        <div class="menu-group">
+                            <span class="menu-trigger">STORE</span>
+                            <div class="dropdown-menu">
+                                <div>Home</div>
+                                <div>Discovery Queue</div>
+                                <div>Wishlist</div>
+                                <div>Points Shop</div>
+                                <div>News</div>
+                                <div>Charts</div>
+                                <div>About</div>
+                            </div>
+                        </div>
+                        <div class="menu-group">
+                            <span class="menu-trigger">COMMUNITY</span>
+                            <div class="dropdown-menu">
+                                <div>Home</div>
+                                <div>Discussions</div>
+                                <div>Workshop</div>
+                                <div>Market</div>
+                                <div>Broadcasts</div>
+                            </div>
+                        </div>
+                        <div class="menu-group">
+                            <span class="menu-trigger">RALPH</span>
+                            <div class="dropdown-menu">
+                                <div>Activity</div>
+                                <div>Profile</div>
+                                <div>Friends</div>
+                                <div>Games</div>
+                                <div>Groups</div>
+                                <div>Content</div>
+                                <div>Badges</div>
+                                <div>Inventory</div>
+                                <div>Steam Replay</div>
+                            </div>
+                        </div>
                         <span>CHAT</span>
                         <span>SUPPORT</span>
                     </div>
@@ -35,35 +69,189 @@
                 </div>
             </div>
         <div class="main-content">
-            <div class="topbar-bottom">
-                <span>Browse</span>
-                <span>Recommendations</span>
-                <span>Categories</span>
-                <span>Hardware</span>
-                <span>Ways to Play</span>
-                <span>Special Selections</span>
+            <nav class="storebar">
+                <button class="storebar-item" data-dropdown="browse">Browse</button>
+                <button class="storebar-item" data-dropdown="recommendations">Recommendations</button>
+                <button class="storebar-item" data-dropdown="categories">Categories</button>
+                <button class="storebar-item" data-dropdown="hardware">Hardware</button>
+                <button class="storebar-item" data-dropdown="ways">Ways to Play</button>
+                <button class="storebar-item" data-dropdown="special">Special Selections</button>
                 <div class="search">
                     <input type="search" placeholder="Search the store">
                 </div>
-                <span>Wishlist</span>
-            </div>
+                <button class="storebar-item" data-dropdown="wishlist">Wishlist</button>
+
+                <!-- Browse Dropdown -->
+                <div class="storebar-dropdown" id="dropdown-browse">
+                    <div class="storebar-dropdown-col">
+                        <a class="storebar-dropdown-link" href="#">Store Home</a>
+                        <a class="storebar-dropdown-link" href="#">New Releases<br><span style='color:#8f98a0;font-size:12px;'>Explore new content on Steam</span></a>
+                        <a class="storebar-dropdown-link" href="#">Upcoming Releases<br><span style='color:#8f98a0;font-size:12px;'>See what's on the release calendar</span></a>
+                        <a class="storebar-dropdown-link" href="#">All Charts & Stats<br><span style='color:#8f98a0;font-size:12px;'>Explore top titles by week, month, or year</span></a>
+                    </div>
+                    <div class="storebar-dropdown-col">
+                        <div class="storebar-dropdown-banner">
+                            <img src="https://store.cloudflare.steamstatic.com/public/images/v6/home/top_sellers_banner.jpg" alt="Top Sellers">
+                            <div class="storebar-dropdown-banner-label">TOP SELLERS</div>
+                        </div>
+                        <div class="storebar-dropdown-banner">
+                            <img src="https://store.cloudflare.steamstatic.com/public/images/v6/home/discounts_banner.jpg" alt="Discounts & Events">
+                            <div class="storebar-dropdown-banner-label">DISCOUNTS & EVENTS</div>
+                        </div>
+                    </div>
+                    <div class="storebar-dropdown-col">
+                        <div class="storebar-dropdown-title">TOP DESTINATIONS</div>
+                        <a class="storebar-dropdown-link" href="#">Free to Play</a>
+                        <a class="storebar-dropdown-link" href="#">Demos</a>
+                        <a class="storebar-dropdown-link" href="#">News & Updates</a>
+                        <a class="storebar-dropdown-link" href="#">Points Shop</a>
+                        <a class="storebar-dropdown-link" href="#">Gift Cards</a>
+                        <div class="storebar-dropdown-title" style="margin-top:18px;">MY ACCOUNT</div>
+                        <a class="storebar-dropdown-link" href="#">My Preferences</a>
+                        <a class="storebar-dropdown-link" href="#">My Wishlist</a>
+                        <a class="storebar-dropdown-link" href="#">My Followed Games</a>
+                        <a class="storebar-dropdown-link" href="#">My Family</a>
+                    </div>
+                </div>
+
+                <!-- Recommendations Dropdown -->
+                <div class="storebar-dropdown" id="dropdown-recommendations">
+                    <div class="storebar-dropdown-col">
+                        <div class="storebar-dropdown-title">PERSONALIZED</div>
+                        <a class="storebar-dropdown-link" href="#">For You<br><span style='color:#8f98a0;font-size:12px;'>Curated recommendations for you</span></a>
+                        <a class="storebar-dropdown-link" href="#">Discovery Queue<br><span style='color:#8f98a0;font-size:12px;'>Get your daily dose of new games</span></a>
+                        <a class="storebar-dropdown-link" href="#">Recently Updated<br><span style='color:#8f98a0;font-size:12px;'>Recently updated games</span></a>
+                        <a class="storebar-dropdown-link" href="#">New & Trending<br><span style='color:#8f98a0;font-size:12px;'>What's popular right now</span></a>
+                    </div>
+                    <div class="storebar-dropdown-col">
+                        <div class="storebar-dropdown-title">BY COMMUNITY</div>
+                        <a class="storebar-dropdown-link" href="#">Top Sellers<br><span style='color:#8f98a0;font-size:12px;'>Most popular by player count</span></a>
+                        <a class="storebar-dropdown-link" href="#">Most Played<br><span style='color:#8f98a0;font-size:12px;'>Currently online players</span></a>
+                        <a class="storebar-dropdown-link" href="#">Popular VR Games<br><span style='color:#8f98a0;font-size:12px;'>Trending in virtual reality</span></a>
+                        <a class="storebar-dropdown-link" href="#">Best Rated<br><span style='color:#8f98a0;font-size:12px;'>All-time highest rated</span></a>
+                    </div>
+                    <div class="storebar-dropdown-col">
+                        <div class="storebar-dropdown-title">BROWSE BY GENRE</div>
+                        <a class="storebar-dropdown-link" href="#">Top Sellers - All</a>
+                        <a class="storebar-dropdown-link" href="#">New & Trending</a>
+                        <a class="storebar-dropdown-link" href="#">Action</a>
+                        <a class="storebar-dropdown-link" href="#">Adventure</a>
+                        <a class="storebar-dropdown-link" href="#">RPG</a>
+                        <a class="storebar-dropdown-link" href="#">Strategy</a>
+                        <a class="storebar-dropdown-link" href="#">Simulation</a>
+                        <a class="storebar-dropdown-link" href="#">Sports & Racing</a>
+                    </div>
+                </div>
+
+                <!-- Categories Dropdown -->
+                <div class="storebar-dropdown" id="dropdown-categories">
+                    <div class="storebar-dropdown-col">
+                        <div class="storebar-dropdown-title">MAIN CATEGORIES</div>
+                        <a class="storebar-dropdown-link" href="#">Top Sellers</a>
+                        <a class="storebar-dropdown-link" href="#">New Releases</a>
+                        <a class="storebar-dropdown-link" href="#">Upcoming</a>
+                        <a class="storebar-dropdown-link" href="#">Specials</a>
+                        <a class="storebar-dropdown-link" href="#">VR Titles</a>
+                        <a class="storebar-dropdown-link" href="#">Deck Verified</a>
+                    </div>
+                    <div class="storebar-dropdown-col">
+                        <div class="storebar-dropdown-title">GENRES</div>
+                        <a class="storebar-dropdown-link" href="#">Action</a>
+                        <a class="storebar-dropdown-link" href="#">Adventure</a>
+                        <a class="storebar-dropdown-link" href="#">Casual</a>
+                        <a class="storebar-dropdown-link" href="#">Indie</a>
+                        <a class="storebar-dropdown-link" href="#">Massively Multiplayer</a>
+                        <a class="storebar-dropdown-link" href="#">Racing</a>
+                        <a class="storebar-dropdown-link" href="#">RPG</a>
+                        <a class="storebar-dropdown-link" href="#">Simulation</a>
+                        <a class="storebar-dropdown-link" href="#">Sports</a>
+                        <a class="storebar-dropdown-link" href="#">Strategy</a>
+                    </div>
+                    <div class="storebar-dropdown-col">
+                        <div class="storebar-dropdown-title">THEMES</div>
+                        <a class="storebar-dropdown-link" href="#">Anime</a>
+                        <a class="storebar-dropdown-link" href="#">Fantasy</a>
+                        <a class="storebar-dropdown-link" href="#">Horror</a>
+                        <a class="storebar-dropdown-link" href="#">Sci-Fi</a>
+                        <a class="storebar-dropdown-link" href="#">Space</a>
+                        <a class="storebar-dropdown-link" href="#">Stealth</a>
+                        <a class="storebar-dropdown-link" href="#">Survival</a>
+                    </div>
+                </div>
+
+                <!-- Hardware Dropdown -->
+                <div class="storebar-dropdown" id="dropdown-hardware">
+                    <div class="storebar-dropdown-col">
+                        <div class="storebar-dropdown-title">STEAM HARDWARE</div>
+                        <a class="storebar-dropdown-link" href="#">Steam Deck<br><span style='color:#8f98a0;font-size:12px;'>Play anywhere, anytime</span></a>
+                        <a class="storebar-dropdown-link" href="#">Steam VR<br><span style='color:#8f98a0;font-size:12px;'>Virtual reality gaming</span></a>
+                    </div>
+                    <div class="storebar-dropdown-col">
+                        <div class="storebar-dropdown-title">ACCESSORIES</div>
+                        <a class="storebar-dropdown-link" href="#">Controllers</a>
+                        <a class="storebar-dropdown-link" href="#">Headsets</a>
+                        <a class="storebar-dropdown-link" href="#">VR Headsets</a>
+                        <a class="storebar-dropdown-link" href="#">Keyboards & Mice</a>
+                        <a class="storebar-dropdown-link" href="#">Steering Wheels</a>
+                    </div>
+                </div>
+
+                <!-- Ways to Play Dropdown -->
+                <div class="storebar-dropdown" id="dropdown-ways">
+                    <div class="storebar-dropdown-col">
+                        <div class="storebar-dropdown-title">PLAY OPTIONS</div>
+                        <a class="storebar-dropdown-link" href="#">Free to Play<br><span style='color:#8f98a0;font-size:12px;'>No purchase required</span></a>
+                        <a class="storebar-dropdown-link" href="#">Demo Available<br><span style='color:#8f98a0;font-size:12px;'>Try before you buy</span></a>
+                        <a class="storebar-dropdown-link" href="#">Early Access<br><span style='color:#8f98a0;font-size:12px;'>In-development games</span></a>
+                        <a class="storebar-dropdown-link" href="#">Free Weekend<br><span style='color:#8f98a0;font-size:12px;'>Play free this weekend</span></a>
+                    </div>
+                    <div class="storebar-dropdown-col">
+                        <div class="storebar-dropdown-title">PLAY MODES</div>
+                        <a class="storebar-dropdown-link" href="#">Single Player</a>
+                        <a class="storebar-dropdown-link" href="#">Multiplayer</a>
+                        <a class="storebar-dropdown-link" href="#">Co-op</a>
+                        <a class="storebar-dropdown-link" href="#">Cross-Platform</a>
+                        <a class="storebar-dropdown-link" href="#">LAN Play</a>
+                    </div>
+                </div>
+
+                <!-- Special Selections Dropdown -->
+                <div class="storebar-dropdown" id="dropdown-special">
+                    <div class="storebar-dropdown-col">
+                        <div class="storebar-dropdown-title">FEATURED</div>
+                        <a class="storebar-dropdown-link" href="#">Steam Next Fest<br><span style='color:#8f98a0;font-size:12px;'>Try upcoming game demos</span></a>
+                        <a class="storebar-dropdown-link" href="#">Publisher Sale<br><span style='color:#8f98a0;font-size:12px;'>Featured publisher events</span></a>
+                        <a class="storebar-dropdown-link" href="#">Game Awards<br><span style='color:#8f98a0;font-size:12px;'>Award-winning titles</span></a>
+                        <a class="storebar-dropdown-link" href="#">Humble Bundles<br><span style='color:#8f98a0;font-size:12px;'>Charity game bundles</span></a>
+                    </div>
+                    <div class="storebar-dropdown-col">
+                        <div class="storebar-dropdown-title">CURATED LISTS</div>
+                        <a class="storebar-dropdown-link" href="#">Cozy Games</a>
+                        <a class="storebar-dropdown-link" href="#">Great Soundtracks</a>
+                        <a class="storebar-dropdown-link" href="#">Hidden Gems</a>
+                        <a class="storebar-dropdown-link" href="#">Perfect for Short Sessions</a>
+                        <a class="storebar-dropdown-link" href="#">Relaxing Games</a>
+                    </div>
+                </div>
+
+                <!-- Wishlist Dropdown -->
+                <div class="storebar-dropdown" id="dropdown-wishlist">
+                    <div class="storebar-dropdown-col">
+                        <div class="storebar-dropdown-title">YOUR WISHLIST</div>
+                        <a class="storebar-dropdown-link" href="#">View Wishlist<br><span style='color:#8f98a0;font-size:12px;'>See all your saved games</span></a>
+                        <a class="storebar-dropdown-link" href="#">Price Alerts<br><span style='color:#8f98a0;font-size:12px;'>Get notified when prices drop</span></a>
+                        <a class="storebar-dropdown-link" href="#">Followed Games<br><span style='color:#8f98a0;font-size:12px;'>Games you're tracking</span></a>
+                    </div>
+                    <div class="storebar-dropdown-col">
+                        <div class="storebar-dropdown-title">WISHLIST DISCOVERY</div>
+                        <a class="storebar-dropdown-link" href="#">Browse Wishlist<br><span style='color:#8f98a0;font-size:12px;'>Explore popular wishlisted games</span></a>
+                        <a class="storebar-dropdown-link" href="#">Community Recommendations<br><span style='color:#8f98a0;font-size:12px;'>Based on your wishlist</span></a>
+                    </div>
+                </div>
+            </nav>
             <div class="site-test"></div>
         </div>
     </div>
-    <script>
-        const mainContent = document.querySelector('.main-content');
-        mainContent.addEventListener('scroll', function() {
-            let scrollTop = mainContent.scrollTop;
-            if (scrollTop === 0) {
-                // at the top
-                document.querySelector('.topbar-top').classList.remove('hidden');
-                document.querySelector('.topbar-bottom').classList.remove('shifted');
-            } else {
-                // scrolled down
-                document.querySelector('.topbar-top').classList.add('hidden');
-                document.querySelector('.topbar-bottom').classList.add('shifted');
-            }
-        });
-    </script>
+    <script src="js/topbar.js"></script>
 </body>
 </html>
