@@ -1,4 +1,4 @@
-        const mainContent = document.querySelector('.main-content');
+const mainContent = document.querySelector('.main-content');
 mainContent.addEventListener('scroll', function() {
     let scrollTop = mainContent.scrollTop;
     if (scrollTop === 0) {
