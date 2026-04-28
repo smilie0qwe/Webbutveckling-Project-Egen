@@ -96,6 +96,7 @@
 .storebar-dropdown {
     display: none;
     position: absolute;
+    justify-content: center;
     left: 0;
     top: 100%;
     background: linear-gradient(to bottom, rgba(24, 37, 53, 1), rgba(24, 37, 53, 1), rgba(24, 37, 53, 0.6));
@@ -136,7 +137,8 @@
     display: flex;
     flex-direction: row;
     background: linear-gradient(to right, rgba(35, 48, 69, 0.8), rgba(28, 39, 55, 0.8));
-    border-radius: 6px
+    border-radius: 4px;
+    padding: 12px 16px;
 }
 
 .storebar-dropdown-title {
@@ -145,6 +147,23 @@
     font-weight: 700;
     margin-bottom: 8px;
     text-transform: uppercase;
+}
+
+.storebar-dropdown-button {
+    color: black;
+    background-color: #66c0f4;
+    border: none;
+    font-size: 15px;
+    font-weight: 400;
+    height: 50%;
+    min-width: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 6px 0;
+    cursor: pointer;
+    text-decoration: none;
+    transition: color 0.18s;
 }
 
 .storebar-dropdown-link {
