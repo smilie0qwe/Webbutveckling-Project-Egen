@@ -29,17 +29,20 @@ storebarItems.forEach(item => {
         }
         
         // Toggle this dropdown
+        const storebar = document.querySelector('.storebar');
         if (!item.classList.contains('open')) {
             item.classList.add('open');
             const ddId = item.getAttribute('data-dropdown');
             const dd = document.getElementById('dropdown-' + ddId);
             if (dd) dd.style.display = 'flex';
+            if (storebar) storebar.classList.add('dropdown-open');
             openDropdown = item;
         } else {
             item.classList.remove('open');
             const ddId = item.getAttribute('data-dropdown');
             const dd = document.getElementById('dropdown-' + ddId);
             if (dd) dd.style.display = 'none';
+            if (storebar) storebar.classList.remove('dropdown-open');
             openDropdown = null;
         }
     });
@@ -47,11 +50,13 @@ storebarItems.forEach(item => {
 
 // Click outside to close
 document.addEventListener('click', function(e) {
+    const storebar = document.querySelector('.storebar');
     if (openDropdown) {
         openDropdown.classList.remove('open');
         const ddId = openDropdown.getAttribute('data-dropdown');
         const dd = document.getElementById('dropdown-' + ddId);
         if (dd) dd.style.display = 'none';
+        if (storebar) storebar.classList.remove('dropdown-open');
         openDropdown = null;
     }
 });

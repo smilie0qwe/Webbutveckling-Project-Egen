@@ -69,23 +69,24 @@
                 </div>
             </div>
         <div class="main-content">
-            <nav class="storebar">
-                <button class="storebar-item" data-dropdown="browse">Browse</button>
-                <button class="storebar-item" data-dropdown="recommendations">Recommendations</button>
-                <button class="storebar-item" data-dropdown="categories">Categories</button>
-                <button class="storebar-item" data-dropdown="hardware">Hardware</button>
-                <button class="storebar-item" data-dropdown="ways">Ways to Play</button>
-                <button class="storebar-item" data-dropdown="special">Special Selections</button>
+            <div class="storebar">
+                <button class="storebar-item" data-dropdown="browse"><span>Browse</span></button>
+                <button class="storebar-item" data-dropdown="recommendations"><span>Recommendations</span></button>
+                <button class="storebar-item" data-dropdown="categories"><span>Categories</span></button>
+                <button class="storebar-item" data-dropdown="hardware"><span>Hardware</span></button>
+                <button class="storebar-item" data-dropdown="ways"><span>Ways to Play</span></button>
+                <button class="storebar-item" data-dropdown="special"><span>Special Selections</span></button>
                 <div class="search">
                     <input type="search" placeholder="Search the store">
                 </div>
-                <button class="storebar-item" data-dropdown="wishlist">Wishlist</button>
+                <button class="storebar-item" data-dropdown="wishlist"><span>Wishlist</span></button>
 
                 <!-- Browse Dropdown -->
                 <div class="storebar-dropdown" id="dropdown-browse">
                     <div class="storebar-dropdown-col">
                         <div class="storebar-dropdown-row">
-                            <div class="storebar-dropdown-col-1"> 
+                            <div class="storebar-dropdown-col-1">
+                                <div class="storebar-dropdown-title">FEATURED</div>
                                 <a class="storebar-dropdown-link" href="#">Store Home</a>
                                 <a class="storebar-dropdown-link" href="#">New Releases</a>
                                 <a class="storebar-dropdown-link" href="#">Upcoming Releases</a>
@@ -117,6 +118,33 @@
                 <!-- Recommendations Dropdown -->
                 <div class="storebar-dropdown" id="dropdown-recommendations">
                     <div class="storebar-dropdown-col">
+                        <div class="storebar-dropdown-row">
+                            <div class="storebar-dropdown-col-1">
+                                <div class="product-item">
+                                    <img src="https://cdn.akamai.steamstatic.com/steam/apps/1391110/header.jpg" alt="Steam Controller">
+                                    <div class="product-info">
+                                        <div class="product-name">Steam Controller</div>
+                                        <div class="product-price">99.00€</div>
+                                    </div>
+                                </div>
+                                <div class="product-item">
+                                    <img src="https://cdn.akamai.steamstatic.com/steam/apps/730/header.jpg" alt="Counter-Strike 2">
+                                    <div class="product-info">
+                                        <div class="product-name">Counter-Strike 2</div>
+                                        <div class="product-price">Gratis</div>
+                                    </div>
+                                </div>
+                                <div class="product-item">
+                                    <img src="https://cdn.akamai.steamstatic.com/steam/apps/1079730/header.jpg" alt="League of Legends">
+                                    <div class="product-info">
+                                        <div class="product-name">League of Legends</div>
+                                        <div class="product-price">Gratis</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="storebar-dropdown-col-1">
                         <div class="storebar-dropdown-title">RECOMMENDATIONS</div>
                         <a class="storebar-dropdown-link" href="#">Recommended for You</a>
                         <a class="storebar-dropdown-link" href="#">Recently Viewed</a>
@@ -128,29 +156,28 @@
                 <!-- Categories Dropdown -->
                 <div class="storebar-dropdown" id="dropdown-categories">
                     <div class="storebar-dropdown-col">
-                        <div class="storebar-dropdown-title">MAIN CATEGORIES</div>
-                        <a class="storebar-dropdown-link" href="#">Top Sellers</a>
-                        <a class="storebar-dropdown-link" href="#">New Releases</a>
-                        <a class="storebar-dropdown-link" href="#">Upcoming</a>
-                        <a class="storebar-dropdown-link" href="#">Specials</a>
-                        <a class="storebar-dropdown-link" href="#">VR Titles</a>
-                        <a class="storebar-dropdown-link" href="#">Deck Verified</a>
+                        <div class="storebar-dropdown-row">
+                            <div class="storebar-dropdown-col-1">
+                                <div class="storebar-dropdown-title">POPULAR GENRES</div>
+                                <a class="storebar-dropdown-link" href="#">Action</a>
+                                <a class="storebar-dropdown-link" href="#">Adventure</a>
+                                <a class="storebar-dropdown-link" href="#">RPG</a>
+                                <a class="storebar-dropdown-link" href="#">Simulation</a>
+                                <a class="storebar-dropdown-link" href="#">Strategy</a>
+                                <a class="storebar-dropdown-link" href="#">Sports</a>
+                            </div>
+                            <div class="storebar-dropdown-col-1">
+                                <div class="storebar-dropdown-title">MORE GENRES</div>
+                                <a class="storebar-dropdown-link" href="#">Casual</a>
+                                <a class="storebar-dropdown-link" href="#">Indie</a>
+                                <a class="storebar-dropdown-link" href="#">Massively Multiplayer</a>
+                                <a class="storebar-dropdown-link" href="#">Racing</a>
+                                <a class="storebar-dropdown-link" href="#">Early Access</a>
+                            </div>
+                        </div>
                     </div>
-                    <div class="storebar-dropdown-col">
-                        <div class="storebar-dropdown-title">GENRES</div>
-                        <a class="storebar-dropdown-link" href="#">Action</a>
-                        <a class="storebar-dropdown-link" href="#">Adventure</a>
-                        <a class="storebar-dropdown-link" href="#">Casual</a>
-                        <a class="storebar-dropdown-link" href="#">Indie</a>
-                        <a class="storebar-dropdown-link" href="#">Massively Multiplayer</a>
-                        <a class="storebar-dropdown-link" href="#">Racing</a>
-                        <a class="storebar-dropdown-link" href="#">RPG</a>
-                        <a class="storebar-dropdown-link" href="#">Simulation</a>
-                        <a class="storebar-dropdown-link" href="#">Sports</a>
-                        <a class="storebar-dropdown-link" href="#">Strategy</a>
-                    </div>
-                    <div class="storebar-dropdown-col">
-                        <div class="storebar-dropdown-title">THEMES</div>
+                    <div class="storebar-dropdown-col-1">
+                        <div class="storebar-dropdown-title">THEMES & MOODS</div>
                         <a class="storebar-dropdown-link" href="#">Anime</a>
                         <a class="storebar-dropdown-link" href="#">Fantasy</a>
                         <a class="storebar-dropdown-link" href="#">Horror</a>
@@ -164,73 +191,117 @@
                 <!-- Hardware Dropdown -->
                 <div class="storebar-dropdown" id="dropdown-hardware">
                     <div class="storebar-dropdown-col">
-                        <div class="storebar-dropdown-title">STEAM HARDWARE</div>
-                        <a class="storebar-dropdown-link" href="#">Steam Deck</a>
-                        <a class="storebar-dropdown-link" href="#">Steam VR</a>
+                        <div class="storebar-dropdown-row">
+                            <div class="storebar-dropdown-col-1">
+                                <div class="storebar-dropdown-title">DEVICES</div>
+                                <a class="storebar-dropdown-link" href="#">Steam Deck</a>
+                                <a class="storebar-dropdown-link" href="#">Steam Deck OLED</a>
+                                <a class="storebar-dropdown-link" href="#">Steam VR</a>
+                            </div>
+                            <div class="storebar-dropdown-col-1">
+                                <div class="storebar-dropdown-title">ACCESSORIES</div>
+                                <a class="storebar-dropdown-link" href="#">Controllers</a>
+                                <a class="storebar-dropdown-link" href="#">Headsets</a>
+                                <a class="storebar-dropdown-link" href="#">Keyboards & Mice</a>
+                            </div>
+                        </div>
                     </div>
-                    <div class="storebar-dropdown-col">
-                        <div class="storebar-dropdown-title">ACCESSORIES</div>
-                        <a class="storebar-dropdown-link" href="#">Controllers</a>
-                        <a class="storebar-dropdown-link" href="#">Headsets</a>
+                    <div class="storebar-dropdown-col-1">
+                        <div class="storebar-dropdown-title">PERIPHERALS</div>
                         <a class="storebar-dropdown-link" href="#">VR Headsets</a>
-                        <a class="storebar-dropdown-link" href="#">Keyboards & Mice</a>
                         <a class="storebar-dropdown-link" href="#">Steering Wheels</a>
+                        <a class="storebar-dropdown-link" href="#">Gaming Chairs</a>
+                        <a class="storebar-dropdown-link" href="#">Docking Stations</a>
                     </div>
                 </div>
 
                 <!-- Ways to Play Dropdown -->
                 <div class="storebar-dropdown" id="dropdown-ways">
                     <div class="storebar-dropdown-col">
-                        <div class="storebar-dropdown-title">PLAY OPTIONS</div>
-                        <a class="storebar-dropdown-link" href="#">Free to Play</a>
-                        <a class="storebar-dropdown-link" href="#">Demo Available</a>
-                        <a class="storebar-dropdown-link" href="#">Early Access</a>
-                        <a class="storebar-dropdown-link" href="#">Free Weekend</a>
+                        <div class="storebar-dropdown-row">
+                            <div class="storebar-dropdown-col-1">
+                                <div class="storebar-dropdown-title">GAME FORMATS</div>
+                                <a class="storebar-dropdown-link" href="#">Free to Play</a>
+                                <a class="storebar-dropdown-link" href="#">Free Weekends</a>
+                                <a class="storebar-dropdown-link" href="#">Early Access</a>
+                                <a class="storebar-dropdown-link" href="#">Demos</a>
+                                <a class="storebar-dropdown-link" href="#">Subscription Games</a>
+                            </div>
+                            <div class="storebar-dropdown-col-1">
+                                <div class="storebar-dropdown-title">PLAY MODES</div>
+                                <a class="storebar-dropdown-link" href="#">Single Player</a>
+                                <a class="storebar-dropdown-link" href="#">Multiplayer</a>
+                                <a class="storebar-dropdown-link" href="#">Co-op</a>
+                                <a class="storebar-dropdown-link" href="#">LAN Play</a>
+                            </div>
+                        </div>
                     </div>
-                    <div class="storebar-dropdown-col">
-                        <div class="storebar-dropdown-title">PLAY MODES</div>
-                        <a class="storebar-dropdown-link" href="#">Single Player</a>
-                        <a class="storebar-dropdown-link" href="#">Multiplayer</a>
-                        <a class="storebar-dropdown-link" href="#">Co-op</a>
-                        <a class="storebar-dropdown-link" href="#">Cross-Platform</a>
-                        <a class="storebar-dropdown-link" href="#">LAN Play</a>
+                    <div class="storebar-dropdown-col-1">
+                        <div class="storebar-dropdown-title">PLATFORMS</div>
+                        <a class="storebar-dropdown-link" href="#">Windows</a>
+                        <a class="storebar-dropdown-link" href="#">macOS</a>
+                        <a class="storebar-dropdown-link" href="#">Linux</a>
+                        <a class="storebar-dropdown-link" href="#">Steam Deck</a>
                     </div>
                 </div>
 
                 <!-- Special Selections Dropdown -->
                 <div class="storebar-dropdown" id="dropdown-special">
                     <div class="storebar-dropdown-col">
-                        <div class="storebar-dropdown-title">FEATURED</div>
-                        <a class="storebar-dropdown-link" href="#">Steam Next Fest</a>
-                        <a class="storebar-dropdown-link" href="#">Publisher Sale</a>
-                        <a class="storebar-dropdown-link" href="#">Game Awards</a>
-                        <a class="storebar-dropdown-link" href="#">Humble Bundles</a>
+                        <div class="storebar-dropdown-row">
+                            <div class="storebar-dropdown-col-1">
+                                <div class="storebar-dropdown-title">EVENTS & SALES</div>
+                                <a class="storebar-dropdown-link" href="#">Steam Next Fest</a>
+                                <a class="storebar-dropdown-link" href="#">Seasonal Sales</a>
+                                <a class="storebar-dropdown-link" href="#">Publisher Sales</a>
+                                <a class="storebar-dropdown-link" href="#">Game Awards</a>
+                            </div>
+                            <div class="storebar-dropdown-col-1">
+                                <div class="storebar-dropdown-title">CURATED LISTS</div>
+                                <a class="storebar-dropdown-link" href="#">Cozy Games</a>
+                                <a class="storebar-dropdown-link" href="#">Hidden Gems</a>
+                                <a class="storebar-dropdown-link" href="#">Award Winners</a>
+                                <a class="storebar-dropdown-link" href="#">Great Soundtracks</a>
+                            </div>
+                        </div>
                     </div>
-                    <div class="storebar-dropdown-col">
-                        <div class="storebar-dropdown-title">CURATED LISTS</div>
-                        <a class="storebar-dropdown-link" href="#">Cozy Games</a>
-                        <a class="storebar-dropdown-link" href="#">Great Soundtracks</a>
-                        <a class="storebar-dropdown-link" href="#">Hidden Gems</a>
-                        <a class="storebar-dropdown-link" href="#">Perfect for Short Sessions</a>
+                    <div class="storebar-dropdown-col-1">
+                        <div class="storebar-dropdown-title">VIBES & MOODS</div>
                         <a class="storebar-dropdown-link" href="#">Relaxing Games</a>
+                        <a class="storebar-dropdown-link" href="#">Perfect for Sessions</a>
+                        <a class="storebar-dropdown-link" href="#">Story Rich</a>
+                        <a class="storebar-dropdown-link" href="#">Competitive</a>
+                        <a class="storebar-dropdown-link" href="#">Indie Favorites</a>
                     </div>
                 </div>
 
                 <!-- Wishlist Dropdown -->
                 <div class="storebar-dropdown" id="dropdown-wishlist">
                     <div class="storebar-dropdown-col">
-                        <div class="storebar-dropdown-title">YOUR WISHLIST</div>
-                        <a class="storebar-dropdown-link" href="#">View Wishlist</a>
-                        <a class="storebar-dropdown-link" href="#">Price Alerts</a>
-                        <a class="storebar-dropdown-link" href="#">Followed Games</a>
+                        <div class="storebar-dropdown-row">
+                            <div class="storebar-dropdown-col-1">
+                                <div class="storebar-dropdown-title">MANAGE WISHLIST</div>
+                                <a class="storebar-dropdown-link" href="#">View Wishlist</a>
+                                <a class="storebar-dropdown-link" href="#">View Saved Items</a>
+                                <a class="storebar-dropdown-link" href="#">Price Alerts</a>
+                            </div>
+                            <div class="storebar-dropdown-col-1">
+                                <div class="storebar-dropdown-title">DISCOVERY</div>
+                                <a class="storebar-dropdown-link" href="#">Curated for You</a>
+                                <a class="storebar-dropdown-link" href="#">Similar to Wishlist</a>
+                                <a class="storebar-dropdown-link" href="#">Community Picks</a>
+                            </div>
+                        </div>
                     </div>
-                    <div class="storebar-dropdown-col">
-                        <div class="storebar-dropdown-title">WISHLIST DISCOVERY</div>
-                        <a class="storebar-dropdown-link" href="#">Browse Wishlist</a>
-                        <a class="storebar-dropdown-link" href="#">Community Recommendations</a>
+                    <div class="storebar-dropdown-col-1">
+                        <div class="storebar-dropdown-title">FOLLOWING</div>
+                        <a class="storebar-dropdown-link" href="#">Followed Games</a>
+                        <a class="storebar-dropdown-link" href="#">Favorite Developers</a>
+                        <a class="storebar-dropdown-link" href="#">Featured Curators</a>
+                        <a class="storebar-dropdown-link" href="#">News Feed</a>
                     </div>
                 </div>
-            </nav>
+            </div>
             <div class="site-test"></div>
         </div>
     </div>
