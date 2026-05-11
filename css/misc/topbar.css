@@ -52,6 +52,11 @@ select {
     flex-direction: column;
 }
 
+.menu-group a {
+    text-decoration: none;
+    color: inherit;
+}
+
 .menu-trigger {
     cursor: pointer;
     font-size: 18px;
