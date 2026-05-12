@@ -12,13 +12,17 @@
     <div class="container">
             <div class="topbar-top">
                 <div class="topbar-big">
+                    <button class="topbar-hamburger-menu" id="topbar-hamburger-menu">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </button>
                     <div class="topbar-left">
                         <img src="https://store.fastly.steamstatic.com/public/shared/images/header/logo_steam.svg" alt="Steam Logo" class="logo">
                         <div class="menu-group">
                             <a href="index.html"> <span class="menu-trigger">STORE</span></a>
                             <div class="dropdown-menu">
                                 <div>Home</div>
-                                <div>Discovery Queue</div>
                                 <div>Wishlist</div>
                                 <div>Points Shop</div>
                                 <div>News</div>
@@ -31,6 +35,7 @@
                             <div class="dropdown-menu">
                                 <div>Home</div>
                                 <div>Discussions</div>
+                                <div>Community workshop</div>
                                 <div>Workshop</div>
                                 <div>Market</div>
                                 <div>Broadcasts</div>
@@ -72,6 +77,16 @@
                     </div>
                 </div>
             </div>
+            <!-- Topbar Mobile Menu -->
+            <div class="topbar-mobile-menu-dropdown" id="topbar-mobile-menu-dropdown">
+                <div class="topbar-mobile-menu-section">
+                    <a class="topbar-mobile-menu-link" href="index.html">STORE</a>
+                    <a class="topbar-mobile-menu-link" href="community.html">COMMUNITY</a>
+                    <a class="topbar-mobile-menu-link" href="ralph.html">RALPH</a>
+                    <a class="topbar-mobile-menu-link" href="chat.html">CHAT</a>
+                    <a class="topbar-mobile-menu-link" href="support.html">SUPPORT</a>
+                </div>
+            </div>
         <div class="main-content">
             <div class="storebar">
                 <button class="storebar-item" data-dropdown="browse"><span>Browse</span></button>
@@ -83,7 +98,7 @@
                 <div class="search">
                     <input type="search" placeholder="Search the store">
                 </div>
-                <button class="storebar-item" data-dropdown="wishlist"><span>Wishlist</span></button>
+                <div class="storebar-item" data-dropdown="wishlist"><span>Wishlist</span></div>
 
                 <!-- Browse Dropdown -->
                 <div class="storebar-dropdown" id="dropdown-browse">
