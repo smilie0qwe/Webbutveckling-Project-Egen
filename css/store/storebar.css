@@ -196,10 +196,6 @@
     to { opacity: 1; transform: translateY(0); }
 }
 
-.storebar-item.open + .storebar-dropdown {
-    display: flex;
-}
-
 .storebar-dropdown-row {
     display: flex;
     flex-direction: row;
@@ -443,6 +439,15 @@
         display: none;
     }
     .search input {
-        width: 300px;
+        width: 280px;
     }
 }
+
+@media (max-width: 675px) {
+    .storebar-dropdown-row {
+        flex-direction: column;
+    }
+    .storebar-dropdown-col-1 {
+        min-width: 100px;
+    }
+    }

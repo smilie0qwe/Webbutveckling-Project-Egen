@@ -1,16 +1,22 @@
 const mainContent = document.querySelector('.main-content');
-mainContent.addEventListener('scroll', function() {
-    let scrollTop = mainContent.scrollTop;
-    if (scrollTop === 0) {
-        // at the top
-        document.querySelector('.topbar-top').classList.remove('hidden');
-        document.querySelector('.storebar').classList.remove('shifted');
-    } else {
-        // scrolled down
-        document.querySelector('.topbar-top').classList.add('hidden');
-        document.querySelector('.storebar').classList.add('shifted');
-    }
-});
+if (mainContent) {
+    mainContent.addEventListener('scroll', function() {
+        let scrollTop = mainContent.scrollTop;
+        if (scrollTop === 0) {
+            // at the top
+            const topbarTop = document.querySelector('.topbar-top');
+            const storebar = document.querySelector('.storebar');
+            if (topbarTop) topbarTop.classList.remove('hidden');
+            if (storebar) storebar.classList.remove('shifted');
+        } else {
+            // scrolled down
+            const topbarTop = document.querySelector('.topbar-top');
+            const storebar = document.querySelector('.storebar');
+            if (topbarTop) topbarTop.classList.add('hidden');
+            if (storebar) storebar.classList.add('shifted');
+        }
+    });
+}
 
 // Topbar Hamburger Menu
 const topbarHamburgerMenu = document.getElementById('topbar-hamburger-menu');
