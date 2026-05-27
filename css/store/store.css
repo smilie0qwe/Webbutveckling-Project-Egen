@@ -9,6 +9,7 @@
     display: flex;
     flex-direction: column;
     gap: 10px;
+    background-image: url(https://store.fastly.steamstatic.com/public/images/v6/home/cluster_bg.png?v=1);
 }
 
 .store-toptext {
@@ -43,6 +44,18 @@
         linear-gradient(to left, #112432, transparent);
     background-repeat: no-repeat;
     background-position: center;
+}
+
+.store-scroll-left:hover {
+    background-image: 
+        url("https://cdn.fastly.steamstatic.com/store/icons/arrow_left.svg"),
+        linear-gradient(to right, #5ea0cc, transparent);
+}
+
+.store-scroll-right:hover {
+    background-image: 
+        url("https://cdn.fastly.steamstatic.com/store/icons/arrow_right.svg"),
+        linear-gradient(to left, #5ea0cc, transparent);
 }
 
 .store-scroll-content {
@@ -165,6 +178,7 @@
     overflow: hidden;
     position: relative;
     height: 380px;
+    max-width: 900px;
 }
 
 .discount-page {
@@ -177,7 +191,6 @@
     transition: transform 0.35s ease;
 }
 
-/* Layout 1: 2 big cards + 2 stacked small cards */
 .discount-page--3large {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
@@ -204,18 +217,17 @@
     grid-row: 2;
 }
 
-/* Layout 2: 3x2 equal grid */
 .discount-page--grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: repeat(2, 1fr);
 }
 
-/* Cards */
 .discount-card {
     position: relative;
     overflow: hidden;
     cursor: pointer;
+        box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.8);
 }
 
 .discount-card img {
@@ -312,9 +324,9 @@
     display: flex;
     align-items: center;
     gap: 6px;
-    max-width: 900px;
     margin: 0 auto;
     width: 100%;
+    justify-content: center;
 }
 
 .discount-dot {
@@ -342,3 +354,20 @@
     margin-left: auto;
     margin-right: auto;
 }
+
+.store-banner {
+    width: 100%;
+    max-width: 900px;
+    height: 190px;
+    object-fit: cover;
+    display: block;
+    margin: 0 auto;
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.8);
+    background-image: url("https://shared.fastly.steamstatic.com/store_item_assets/steam/clusters/takeunder/33bfee397d2953c3e38004bc/bfe20884fbfd5ad12f07846b4b2ee585ee09dd4d/takeunder_desktop_english.jpg?t=1778612622");
+    cursor: pointer;
+}
+
+.store-banner:hover {
+    box-shadow: 0px 0px 15px rgba(0, 140, 255, 0.8);
+}
+

@@ -32,6 +32,7 @@ body {
     justify-content: center;
     width: 100%;
     justify-content: space-between;
+    padding: 0px 128px;
 }
 
 .topbar-left {
@@ -268,5 +269,8 @@ body {
     .logo {
         height: 36px;
         width: 144px;
+    }
+    .topbar-big {
+        padding: 0px 8px;
     }
 }

@@ -35,7 +35,7 @@ const featuredGames = [
             "https://cdn.akamai.steamstatic.com/steam/apps/1245620/header.jpg",
         ],
         availability: "Overwhelmingly Positive Reviews",
-        tag: "Game of the Year",
+        tag: "GOTY 2022",
         price: "59,99€",
     },
     {
