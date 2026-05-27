@@ -231,3 +231,67 @@ document.addEventListener("DOMContentLoaded", () => {
     document.querySelector(".discount-arrow-right").addEventListener("click", () => goTo(current + 1));
     dots.forEach((dot, i) => dot.addEventListener("click", () => goTo(i)));
 });
+
+
+// Trending carousel
+function initTrending() {
+    const allCards = [...document.querySelectorAll(".trending-card")];
+    const track = document.querySelector(".trending-track");
+    const dotsContainer = document.querySelector(".trending-dots-container");
+    let trendingCurrent = 0;
+    let pages = [];
+
+    function cardsPerPage() {
+        if (window.innerWidth < 450) return 1;
+        if (window.innerWidth < 675) return 2;
+        if (window.innerWidth < 900) return 3;
+        return 4;
+    }
+
+    function buildPages() {
+        const perPage = cardsPerPage();
+        track.innerHTML = "";
+        dotsContainer.innerHTML = "";
+        pages = [];
+        trendingCurrent = 0;
+
+        for (let i = 0; i < allCards.length; i += perPage) {
+            const page = document.createElement("div");
+            page.className = "trending-page";
+            page.style.gridTemplateColumns = `repeat(${perPage}, 1fr)`;
+            allCards.slice(i, i + perPage).forEach(card => page.appendChild(card));
+            track.appendChild(page);
+            pages.push(page);
+
+            const dot = document.createElement("button");
+            dot.className = "trending-dot" + (i === 0 ? " active" : "");
+            dot.addEventListener("click", () => goToTrending(pages.indexOf(page)));
+            dotsContainer.appendChild(dot);
+        }
+
+        pages.forEach((p, i) => p.style.transform = `translateX(${i * 100}%)`);
+    }
+
+    function goToTrending(index) {
+        trendingCurrent = (index + pages.length) % pages.length;
+        pages.forEach((p, i) => {
+            p.style.transform = `translateX(${(i - trendingCurrent) * 100}%)`;
+        });
+        dotsContainer.querySelectorAll(".trending-dot").forEach((d, i) => {
+            d.classList.toggle("active", i === trendingCurrent);
+        });
+    }
+
+    document.querySelector(".trending-arrow-left").addEventListener("click", () => goToTrending(trendingCurrent - 1));
+    document.querySelector(".trending-arrow-right").addEventListener("click", () => goToTrending(trendingCurrent + 1));
+
+    buildPages();
+
+    let resizeTimer;
+    window.addEventListener("resize", () => {
+        clearTimeout(resizeTimer);
+        resizeTimer = setTimeout(buildPages, 150);
+    });
+}
+
+document.addEventListener("DOMContentLoaded", initTrending);
