@@ -34,6 +34,7 @@
         linear-gradient(to right, #112432, transparent);
     background-repeat: no-repeat;
     background-position: center;
+    cursor: pointer;
 }
 
 .store-scroll-right {
@@ -44,6 +45,7 @@
         linear-gradient(to left, #112432, transparent);
     background-repeat: no-repeat;
     background-position: center;
+    cursor: pointer;
 }
 
 .store-scroll-left:hover {
@@ -243,10 +245,6 @@
     transform: scale(1.03);
 }
 
-.discount-card--highlighted {
-    outline: 2px solid #f5c518;
-}
-
 .discount-card-overlay {
     position: absolute;
     bottom: 0;
@@ -406,9 +404,9 @@
 
 .trending-track {
     flex: 1;
-    overflow: hidden;
+    overflow-x: hidden;
     position: relative;
-    height: 220px;
+    height: 190px;
 }
 
 .trending-page {
@@ -442,10 +440,6 @@
 
 .trending-card:hover img {
     transform: scale(1.03);
-}
-
-.trending-card--highlighted {
-    outline: 2px solid #c6d4df;
 }
 
 .trending-card-price {
@@ -528,9 +522,18 @@
     }
     .trending-card {
         width: 100%;
-        height: 150px;
     }
     .trending-page {
         grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    }
+    .discount-card:nth-child(1) {
+        grid-row: 1 !important;
+        grid-column: 2 !important;
+    }
+    .discount-card:nth-child(2) {
+        grid-row: 2 !important;
+    }
+    .discount-page--3large {
+        grid-template-columns: 0px;
     }
 }
