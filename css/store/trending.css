@@ -1,0 +1,131 @@
+.store-trending {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    max-width: 980px;
+    margin: 0 auto;
+    width: 100%;
+}
+
+.trending-header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.trending-browse-btn {
+    background: transparent;
+    border: 1px solid #4a6a80;
+    color: #c6d4df;
+    padding: 4px 12px;
+    font-size: 11px;
+    cursor: pointer;
+    letter-spacing: 0.5px;
+}
+
+.trending-browse-btn:hover {
+    border-color: #c6d4df;
+}
+
+.trending-track {
+    flex: 1;
+    overflow-x: hidden;
+    position: relative;
+    height: 190px;
+}
+
+.trending-page {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: grid;
+    gap: 4px;
+    transition: transform 0.35s ease;
+}
+
+.trending-card {
+    display: flex;
+    flex-direction: column;
+    cursor: pointer;
+    background-color: #0C161F;
+    max-height: 180px;
+    width: 222px;
+    gap: 1px;
+}
+
+.trending-card img {
+    width: 100%;
+    height: 140px;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.2s ease;
+}
+
+.trending-card:hover img {
+    transform: scale(1.03);
+}
+
+.trending-card-price {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    padding: 0 8px;
+    font-size: 13px;
+    color: #c6d4df;
+    height: 40%;
+    background: linear-gradient(to left, #1B6387, #1C5E81);
+}
+
+.trending-card-price .discount-badge {
+    font-size: 12px;
+    padding: 1px 5px;
+}
+
+.trending-card-price .discount-original {
+    font-size: 11px;
+}
+
+.trending-card-price .discount-sale {
+    font-size: 13px;
+}
+
+.trending-card-friends {
+    display: flex;
+    gap: 16px;
+    padding: 0 8px;
+    height: 60%;
+    background: linear-gradient(to right, #223B4F, #25435B);
+    align-items: center;
+}
+
+.trending-card-friends img {
+    width: 32px;
+    height: 32px;
+    object-fit: cover;
+    border: 1px solid #4a6a80;
+}
+
+.trending-dots-container {
+    display: flex;
+    justify-content: center;
+    gap: 6px;
+    margin-top: 4px;
+}
+
+.trending-dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: #4a6a80;
+    border: none;
+    cursor: pointer;
+    transition: background 0.2s, transform 0.2s;
+    padding: 0;
+}
+
+.trending-dot.active {
+    background: #c6d4df;
+    transform: scale(1.3);
+}
